@@ -1,7 +1,8 @@
 const { createClient } = require('@supabase/supabase-js');
 
-const supabaseUrl = 'https://qeyuymprpmsqvukmdxfz.supabase.co';
-const supabaseKey = 'sb_publishable_FonOF_-_Vk-hhCa6JOYD4Q_ZfxxnIdC'; // anon public
+// ⚠️ Usa variables de entorno (mejor práctica)
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 

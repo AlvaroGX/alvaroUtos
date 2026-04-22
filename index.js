@@ -1,12 +1,11 @@
-
-const cors = require('cors');
-app.use(cors());
-
-const supabase = require('./conexion');
 const express = require('express');
+const cors = require('cors');
+const supabase = require('./conexion');
+
 const app = express();
 const port = process.env.PORT || 3127;
 
+app.use(cors());
 app.use(express.json());
 
 // GET
